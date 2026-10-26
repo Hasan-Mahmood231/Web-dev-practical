@@ -1,0 +1,352 @@
+/* ---------- 1. COLORS (only 3 colors + white) ---------- */
+:root {
+  --ink: #1f2933;      /* text */
+  --accent: #2a6f97;   /* the only bright color */
+  --soft: #f3f6f8;     /* light background for sections */
+  --white: #ffffff;
+  --nav-height: 64px;
+}
+
+/* ---------- 2. RESET / BASE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;            /* smooth scroll when clicking links */
+  scroll-padding-top: var(--nav-height); /* stops fixed navbar covering titles */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- 3. NAVBAR: position FIXED ---------- */
+/* fixed = stays on screen at the same place while scrolling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--nav-height);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  border-bottom: 1px solid #e3e8ec;
+  z-index: 100;                       /* keeps navbar above everything */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 8px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  font-weight: bold;
+  
+}
+
+/* ---------- 4. HERO: position STATIC (default) ---------- */
+/* static = normal flow, top/left/z-index have no effect */
+.hero {
+  position: static;
+  min-height: 100vh;
+  padding: calc(var(--nav-height) + 40px) 24px 40px; /* space for fixed navbar */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  background: var(--soft);
+}
+
+.hero h1 {
+  font-size: 48px;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+.hero p {
+  max-width: 480px;
+}
+
+.btn {
+  padding: 12px 28px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 8px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* ---------- 5. FEATURES: position STICKY ---------- */
+/* sticky = scrolls normally, then "sticks" at top: 80px inside its parent */
+.features {
+  display: flex;
+  align-items: flex-start;            /* needed so sticky heading can move */
+  gap: 48px;
+  padding: 96px 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sticky-title {
+  position: sticky;
+  top: 100px;
+  min-width: 180px;
+  font-size: 32px;
+  background-color: #2a6f97;
+  padding: 9px;
+  border-radius: 9px;
+  color: white;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;                         /* big gap so you can see sticky working */
+}
+
+.feature h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+
+/* ---------- 6. ABOUT: RELATIVE + ABSOLUTE ---------- */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  padding: 96px 32px;
+  background: var(--soft);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* relative = this box becomes the "parent" for absolute children */
+.picture {
+  position: relative;
+  width: 360px;
+}
+
+.picture-art {
+  height: 260px;
+  background: var(--accent);          /* replace with <img> if you want */
+  border-radius: 12px;
+}
+
+.picture-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* absolute = placed inside the nearest relative parent (.picture) */
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 12px;
+  background: var(--white);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.picture figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.about-text {
+  max-width: 420px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+/* ---------- 7. FOOTER ---------- */
+/* ---------- 7. FOOTER ---------- */
+.footer {
+  position: static;                   /* normal flow, always at the page end */
+  background: var(--ink);
+  color: #cbd2d9;                     /* soft grey text on dark background */
+  padding: 72px 32px 0;
+  font-size: 15px;
+}
+
+/* top area: 4 columns (brand column is wider) */
+.footer-top {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 56px;
+}
+
+/* brand column */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.footer-brand p {
+  max-width: 380px;
+  line-height: 1.7;
+}
+
+/* link columns */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col h4 {
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: var(--white);
+}
+
+.footer-col a:hover {
+  color: var(--white);
+}
+
+/* newsletter form */
+.newsletter {
+  display: flex;
+  margin-top: 12px;
+}
+
+.newsletter input {
+  flex: 1;
+  min-width: 0;                       /* lets the input shrink on small screens */
+  padding: 10px 12px;
+  border: 1px solid #3e4c59;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  background: transparent;
+  color: var(--white);
+  font-size: 14px;
+}
+
+.newsletter input::placeholder {
+  color: #9aa5b1;
+}
+
+.newsletter input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.newsletter button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  opacity: 0.9;
+}
+
+/* bottom bar */
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px solid #3e4c59;
+  font-size: 14px;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-legal a:hover {
+  color: var(--white);
+}
+
+/* ---------- 8. BACK TO TOP: position FIXED ---------- */
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 100;
+}
+
+/* ---------- 9. MOBILE ---------- */
+@media (max-width: 700px) {
+  .navbar { padding: 0 16px; }
+  .nav-links { gap: 14px; font-size: 14px; }
+  .logo-text { display: none; }
+  .hero h1 { font-size: 32px; }
+  .features { flex-direction: column; gap: 24px; padding: 64px 20px; }
+  .sticky-title { top: calc(var(--nav-height) + 8px); background: var(--white); width: 100%; padding: 8px 0; }
+  .feature-list { gap: 64px; }
+  .picture { width: 100%; }
+}
