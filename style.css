@@ -15,8 +15,8 @@
 }
 
 html {
-  scroll-behavior: smooth;            /* smooth scroll when clicking links */
-  scroll-padding-top: var(--nav-height); /* stops fixed navbar covering titles */
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
 }
 
 body {
@@ -32,7 +32,6 @@ a {
 }
 
 /* ---------- 3. NAVBAR: position FIXED ---------- */
-/* fixed = stays on screen at the same place while scrolling */
 .navbar {
   position: fixed;
   top: 0;
@@ -45,7 +44,7 @@ a {
   justify-content: space-between;
   background: var(--white);
   border-bottom: 1px solid #e3e8ec;
-  z-index: 100;                       /* keeps navbar above everything */
+  z-index: 100;
 }
 
 .logo {
@@ -74,16 +73,14 @@ a {
 
 .nav-links a:hover {
   color: var(--accent);
-  font-weight: bold;
-  
+  text-decoration: underline;         /* replaces bold so links don't shift */
 }
 
-/* ---------- 4. HERO: position STATIC (default) ---------- */
-/* static = normal flow, top/left/z-index have no effect */
+/* ---------- 4. HERO: position STATIC ---------- */
 .hero {
   position: static;
   min-height: 100vh;
-  padding: calc(var(--nav-height) + 40px) 24px 40px; /* space for fixed navbar */
+  padding: calc(var(--nav-height) + 40px) 24px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,10 +112,9 @@ a {
 }
 
 /* ---------- 5. FEATURES: position STICKY ---------- */
-/* sticky = scrolls normally, then "sticks" at top: 80px inside its parent */
 .features {
   display: flex;
-  align-items: flex-start;            /* needed so sticky heading can move */
+  align-items: flex-start;
   gap: 48px;
   padding: 96px 32px;
   max-width: 1000px;
@@ -130,16 +126,16 @@ a {
   top: 100px;
   min-width: 180px;
   font-size: 32px;
-  background-color: #2a6f97;
+  background-color: var(--accent);
+  color: var(--white);
   padding: 9px;
   border-radius: 9px;
-  color: white;
 }
 
 .feature-list {
   display: flex;
   flex-direction: column;
-  gap: 120px;                         /* big gap so you can see sticky working */
+  gap: 120px;
 }
 
 .feature h3 {
@@ -152,14 +148,13 @@ a {
 .about {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 48px;
   padding: 96px 32px;
   background: var(--soft);
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
-/* relative = this box becomes the "parent" for absolute children */
 .picture {
   position: relative;
   width: 360px;
@@ -167,7 +162,7 @@ a {
 
 .picture-art {
   height: 260px;
-  background: var(--accent);          /* replace with <img> if you want */
+  background: var(--accent);
   border-radius: 12px;
 }
 
@@ -178,7 +173,6 @@ a {
   border-radius: 12px;
 }
 
-/* absolute = placed inside the nearest relative parent (.picture) */
 .badge {
   position: absolute;
   top: 12px;
@@ -206,16 +200,14 @@ a {
 }
 
 /* ---------- 7. FOOTER ---------- */
-/* ---------- 7. FOOTER ---------- */
 .footer {
-  position: static;                   /* normal flow, always at the page end */
+  position: static;
   background: var(--ink);
-  color: #cbd2d9;                     /* soft grey text on dark background */
+  color: #cbd2d9;
   padding: 72px 32px 0;
   font-size: 15px;
 }
 
-/* top area: 4 columns (brand column is wider) */
 .footer-top {
   max-width: 1100px;
   margin: 0 auto;
@@ -225,7 +217,6 @@ a {
   padding-bottom: 56px;
 }
 
-/* brand column */
 .footer-logo {
   display: flex;
   align-items: center;
@@ -241,7 +232,6 @@ a {
   line-height: 1.7;
 }
 
-/* link columns */
 .footer-col {
   display: flex;
   flex-direction: column;
@@ -258,7 +248,6 @@ a {
   color: var(--white);
 }
 
-/* newsletter form */
 .newsletter {
   display: flex;
   margin-top: 12px;
@@ -266,7 +255,7 @@ a {
 
 .newsletter input {
   flex: 1;
-  min-width: 0;                       /* lets the input shrink on small screens */
+  min-width: 0;
   padding: 10px 12px;
   border: 1px solid #3e4c59;
   border-right: none;
@@ -299,7 +288,6 @@ a {
   opacity: 0.9;
 }
 
-/* bottom bar */
 .footer-bottom {
   max-width: 1100px;
   margin: 0 auto;
@@ -339,14 +327,76 @@ a {
   z-index: 100;
 }
 
-/* ---------- 9. MOBILE ---------- */
+
+/* =====================================================
+   9. MEDIA QUERIES (always at the LAST of the file)
+   Order: large screen to small screen
+   ===================================================== */
+
+/* ----- Laptop: 1024px and below ----- */
+@media (max-width: 1024px) {
+  .features { padding: 80px 28px; gap: 36px; }
+  .about { padding: 80px 28px; gap: 36px; }
+  .footer-top { gap: 32px; }
+}
+
+/* ----- Tablet: 900px and below ----- */
+@media (max-width: 900px) {
+  .hero h1 { font-size: 40px; }
+
+  .features { padding: 72px 24px; }
+  .sticky-title { min-width: 150px; font-size: 26px; }
+  .feature-list { gap: 90px; }
+
+  .footer { padding: 64px 24px 0; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 40px 32px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-brand p { max-width: 560px; }
+}
+
+/* ----- Mobile: 700px and below ----- */
 @media (max-width: 700px) {
   .navbar { padding: 0 16px; }
-  .nav-links { gap: 14px; font-size: 14px; }
   .logo-text { display: none; }
+  .nav-links { gap: 14px; font-size: 14px; }
+
+  .hero { padding: calc(var(--nav-height) + 24px) 20px 32px; gap: 16px; }
   .hero h1 { font-size: 32px; }
-  .features { flex-direction: column; gap: 24px; padding: 64px 20px; }
-  .sticky-title { top: calc(var(--nav-height) + 8px); background: var(--white); width: 100%; padding: 8px 0; }
+
+  .features { flex-direction: column; gap: 24px; padding: 56px 20px; }
+  .sticky-title {
+    top: calc(var(--nav-height) + 8px);
+    width: 100%;
+    min-width: 0;
+    font-size: 22px;
+    padding: 10px 14px;
+    z-index: 10;
+  }
   .feature-list { gap: 64px; }
+
+  .about { padding: 56px 20px; gap: 28px; }
   .picture { width: 100%; }
+  .picture-art { height: 220px; }
+  .about-text { max-width: 100%; }
+  .about-text h2 { font-size: 28px; }
+
+  .footer { padding: 56px 20px 0; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; padding-bottom: 40px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  .to-top { right: 16px; bottom: 16px; width: 40px; height: 40px; font-size: 18px; }
+}
+
+/* ----- Small phone: 480px and below ----- */
+@media (max-width: 480px) {
+  .navbar { padding: 0 12px; }
+  .nav-links { gap: 10px; font-size: 13px; }
+
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 15px; }
+  .btn { padding: 11px 22px; }
+
+  .feature h3 { font-size: 20px; }
+
+  .footer-legal { flex-direction: column; gap: 8px; }
 }
