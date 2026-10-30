@@ -3,143 +3,360 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Leaf Studio</title>
+  <title>Bluepeak | Digital Services</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR: position fixed -->
+  <!-- ================= HEADER + NAVBAR (position: fixed) ================= -->
   <header class="navbar">
     <a href="#home" class="logo">
-      <span class="logo-mark">L</span>
-      <span class="logo-text">Leaf Studio</span>
+      <span class="logo-mark">B</span>
+      <span class="logo-text">Bluepeak</span>
     </a>
-    <nav class="nav-links">
+
+    <nav class="nav-links" aria-label="Main navigation">
       <a href="#home">Home</a>
-      <a href="#features">Features</a>
+      <a href="#services">Services</a>
       <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
     </nav>
+
+    <a href="#contact" class="btn nav-btn">Get a quote</a>
   </header>
 
   <main>
-    <!-- HERO: position static (normal flow) -->
+
+    <!-- ================= HERO (background image) ================= -->
     <section id="home" class="hero">
-      <h1>Simple design for clear ideas.</h1>
-      <p>We build clean, fast websites that are easy to read and easy to use. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias dolor earum possimus?</p>
-      <a href="#features" class="btn">See what we do</a>
-    </section>
-
-    <!-- FEATURES: heading uses position sticky -->
-    <section id="features" class="features">
-      <h2 class="sticky-title">Features</h2>
-      <div class="feature-list">
-        <article class="feature">
-          <h3>Clean layout</h3>
-          <p>One idea per section, with plenty of space around it.</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas aspernatur quo nam possimus. Magni incidunt voluptatibus alias fuga. Maxime rerum consequatur minima, voluptatum quam nulla ullam tempore eius magnam? Facere cumque exercitationem quas voluptatum commodi repellat odio vel, nobis, id unde repudiandae praesentium nam quibusdam saepe tenetur minima aliquam iusto nemo itaque quos molestiae quo consequuntur corporis! Praesentium quibusdam debitis nemo magnam, voluptates omnis perferendis distinctio nesciunt perspiciatis? Inventore, et enim commodi voluptatem, rerum molestiae odit dolorem atque quas, quidem quis id blanditiis temporibus ipsa! Fugit, fuga rem, sapiente laboriosam, dicta cum tempore veniam esse voluptate ex necessitatibus sequi unde!</p>
-        </article>
-        <article class="feature">
-          <h3>Fast loading</h3>
-          <p>Plain HTML and CSS only. No heavy libraries.</p>
-          <p>Maxime rerum consequatur minima, voluptatum quam nulla ullam tempore eius magnam? Facere cumque exercitationem quas voluptatum commodi repellat odio vel, nobis, id unde repudiandae praesentium nam quibusdam saepe tenetur minima aliquam iusto nemo itaque quos molestiae quo consequuntur corporis! Praesentium quibusdam debitis nemo magnam, voluptates omnis perferendis distinctio nesciunt perspiciatis? Inventore, et enim commodi voluptatem, rerum molestiae odit dolorem atque quas, quidem quis id blanditiis temporibus ipsa! Fugit, fuga rem, sapiente laboriosam, dicta cum tempore veniam esse voluptate ex necessitatibus sequi unde!</p>
-
-        </article>
-        <article class="feature">
-          <h3>Works everywhere</h3>
-          <p>The layout adapts to phones, tablets and desktops.</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas aspernatur quo nam possimus. Magni incidunt voluptatibus alias fuga. Maxime rerum consequatur minima, voluptatum quam nulla ullam tempore eius magnam? Facere cumque exercitationem quas voluptatum commodi repellat odio vel, nobis, id unde repudiandae praesentium nam quibusdam saepe tenetur minima aliquam iusto nemo itaque quos molestiae quo consequuntur corporis! Praesentium quibusdam debitis nemo magnam, voluptates omnis perferendis distinctio nesciunt perspiciatis? Inventore, et enim commodi voluptatem, rerum molestiae odit dolorem atque quas, quidem quis id blanditiis temporibus ipsa! Fugit, fuga rem, sapiente laboriosam, dicta cum tempore veniam esse voluptate ex necessitatibus sequi unde!</p>
-
-        </article>
-      </div>
-    </section>
-
-    <!-- ABOUT: picture (relative) + badge (absolute) + description -->
-    <section id="about" class="about">
-      <figure class="picture">
-        <div class="picture-art">
-            <img src="Gemini_Generated_Image_j0exqjj0exqjj0ex.png" alt="">
-        </div>
-        <span class="badge">New</span>
-        <figcaption>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ut obcaecati cupiditate impedit vel nemo reiciendis sint quia inventore neque, quaerat ipsam totam aliquam atque quisquam distinctio explicabo nesciunt temporibus voluptatibus est. Consectetur, recusandae. Voluptatem quis veritatis quas repudiandae quam. Maiores, praesentium aliquam? Sequi enim cupiditate cum quos cumque repudiandae odio molestiae, nemo, voluptatum suscipit velit porro mollitia earum culpa non aperiam exercitationem, neque sunt vero? Omnis beatae deserunt modi exercitationem reiciendis autem quo quae mollitia! Doloribus in vero, laudantium qui omnis quos molestiae unde ex. Quibusdam fugiat illum consectetur!</figcaption>
-      </figure>
-      <div class="about-text">
-        <h2>About us</h2>
-        <p>
-          We are a small team that focuses on one thing: making pages that
-          look calm and work well. Every page uses one font, one accent
-          color and clear spacing.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nesciunt tempore vero, odio nihil hic maxime suscipit sapiente deserunt quae accusamus. Quam culpa consequatur minima placeat mollitia dignissimos porro ad.
+      <div class="container hero-content">
+        <p class="pill">Digital services agency</p>
+        <h1>We build websites, apps and brands that grow your business.</h1>
+        <p class="lead">
+          Bluepeak is a team of designers and developers. We plan, design
+          and launch clean digital products for small businesses, startups
+          and organizations.
         </p>
+
+        <div class="hero-buttons">
+          <a href="#services" class="btn">Our services</a>
+          <a href="#contact" class="btn btn-outline">Contact us</a>
+        </div>
+
+        <ul class="stats">
+          <li><strong>120+</strong><span>Projects done</span></li>
+          <li><strong>60+</strong><span>Happy clients</span></li>
+          <li><strong>5 yrs</strong><span>Experience</span></li>
+        </ul>
       </div>
     </section>
+
+    <!-- ================= SERVICES (CSS Grid) ================= -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our services</h2>
+          <p>Everything you need to launch and grow online, in one place.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <span class="icon">&lt;/&gt;</span>
+            <h3>Web development</h3>
+            <p>Fast, secure and responsive websites built with clean code that works on every device.</p>
+          </article>
+
+          <article class="card">
+            <span class="icon">UI</span>
+            <h3>UI / UX design</h3>
+            <p>Simple layouts and clear user flows that make your product easy and pleasant to use.</p>
+          </article>
+
+          <article class="card">
+            <span class="icon">App</span>
+            <h3>Mobile apps</h3>
+            <p>Android and iOS apps designed around your customers, from first idea to store launch.</p>
+          </article>
+
+          <article class="card">
+            <span class="icon">SEO</span>
+            <h3>SEO and marketing</h3>
+            <p>Get found on search engines and reach the right audience with a clear marketing plan.</p>
+          </article>
+
+          <article class="card">
+            <span class="icon">Br</span>
+            <h3>Branding</h3>
+            <p>Logos, colors and style guides that make your business look consistent and trusted.</p>
+          </article>
+
+          <article class="card">
+            <span class="icon">IT</span>
+            <h3>Support and hosting</h3>
+            <p>Hosting, backups and monthly maintenance so your website stays online and up to date.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT (image + text + sticky aside) ================= -->
+    <section id="about" class="section section-soft">
+      <div class="container about-layout">
+
+        <div class="about-main">
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1000&q=70"
+              alt="Team meeting around a table">
+            <span class="badge">Since 2021</span>
+          </div>
+
+          <h2>About Bluepeak</h2>
+          <p>
+            We started as three friends who wanted to make websites that look
+            calm and work well. Today we are a team of designers, developers
+            and marketers helping clients in many countries.
+          </p>
+          <p>
+            Every project follows the same rule: understand the goal first,
+            then design, build, test and launch. You always know what we are
+            doing and why.
+          </p>
+        </div>
+
+        <aside class="why">
+          <h3>Why choose us</h3>
+          <ul>
+            <li>Clear prices with no hidden costs</li>
+            <li>Weekly progress updates</li>
+            <li>Mobile friendly on every project</li>
+            <li>30 days of free support after launch</li>
+          </ul>
+          <a href="#contact" class="btn">Start a project</a>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ================= PROCESS (CSS Grid) ================= -->
+    <section id="process" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>How we work</h2>
+          <p>A simple four step process from idea to launch.</p>
+        </div>
+
+        <ol class="process-grid">
+          <li class="step">
+            <span class="step-number">1</span>
+            <h3>Discover</h3>
+            <p>We learn about your goals, audience and budget.</p>
+          </li>
+          <li class="step">
+            <span class="step-number">2</span>
+            <h3>Design</h3>
+            <p>We draw layouts and you approve them before coding.</p>
+          </li>
+          <li class="step">
+            <span class="step-number">3</span>
+            <h3>Build</h3>
+            <p>We write the code and test it on desktop, tablet and mobile.</p>
+          </li>
+          <li class="step">
+            <span class="step-number">4</span>
+            <h3>Launch</h3>
+            <p>We publish your project and stay with you after launch.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= WORK (Grid + absolute captions) ================= -->
+    <section id="work" class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <h2>Recent work</h2>
+          <p>A few projects we are proud of.</p>
+        </div>
+
+        <div class="work-grid">
+          <figure class="work-item work-wide">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=70"
+              alt="Analytics dashboard on a laptop">
+            <figcaption>Sales dashboard for a retail company</figcaption>
+          </figure>
+
+          <figure class="work-item">
+            <img
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=70"
+              alt="Code on a laptop screen">
+            <figcaption>Online store website</figcaption>
+          </figure>
+
+          <figure class="work-item">
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=70"
+              alt="Developers working at desks">
+            <figcaption>Booking app for a clinic</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING (CSS Grid) ================= -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Simple pricing</h2>
+          <p>Choose a plan. You can upgrade at any time.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="plan">
+            <h3>Starter</h3>
+            <p class="price">$299</p>
+            <ul>
+              <li>1 page website</li>
+              <li>Mobile friendly design</li>
+              <li>Contact form</li>
+              <li>7 days support</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline">Choose Starter</a>
+          </article>
+
+          <article class="plan featured">
+            <span class="ribbon">Most popular</span>
+            <h3>Business</h3>
+            <p class="price">$699</p>
+            <ul>
+              <li>Up to 6 pages</li>
+              <li>Custom UI design</li>
+              <li>Basic SEO setup</li>
+              <li>30 days support</li>
+            </ul>
+            <a href="#contact" class="btn btn-light">Choose Business</a>
+          </article>
+
+          <article class="plan">
+            <h3>Premium</h3>
+            <p class="price">$1499</p>
+            <ul>
+              <li>Unlimited pages</li>
+              <li>Web app features</li>
+              <li>Full SEO and branding</li>
+              <li>90 days support</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline">Choose Premium</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT (Grid: info + form) ================= -->
+    <section id="contact" class="section section-soft">
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+          <h2>Let us talk about your project</h2>
+          <p>
+            Fill in the form and we will reply within one working day.
+            You can also contact us directly.
+          </p>
+          <ul>
+            <li><strong>Email:</strong> hello@bluepeak.example</li>
+            <li><strong>Phone:</strong> +92 300 0000000</li>
+            <li><strong>Office:</strong> Islamabad, Pakistan</li>
+            <li><strong>Hours:</strong> Mon to Fri, 9am to 6pm</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" action="#" method="post">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+
+          <label for="service">Service needed</label>
+          <select id="service" name="service">
+            <option>Web development</option>
+            <option>UI / UX design</option>
+            <option>Mobile app</option>
+            <option>SEO and marketing</option>
+            <option>Branding</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your project"></textarea>
+
+          <button type="submit" class="btn">Send message</button>
+        </form>
+
+      </div>
+    </section>
+
   </main>
 
-  <!-- FOOTER -->
-  <!-- FOOTER -->
-<footer id="contact" class="footer">
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-top">
 
-  <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">
+          <span class="logo-mark">B</span>
+          <span>Bluepeak</span>
+        </a>
+        <p>
+          Bluepeak is a digital services agency. We design and build
+          websites, mobile apps and brands that are clean, fast and easy to
+          use. Our goal is simple: help your business look professional and
+          reach more customers online.
+        </p>
+      </div>
 
-    <!-- Column 1: brand + description -->
-    <div class="footer-brand">
-      <a href="#home" class="footer-logo">
-        <span class="logo-mark">L</span>
-        <span>Leaf Studio</span>
-      </a>
-      <p>
-        Leaf Studio is a small web design team. We build clean, fast and
-        simple websites for businesses, creators and students. Every project
-        gets clear layout, readable text and a calm look, so your visitors
-        find what they need in seconds.
-      </p>
+      <nav class="footer-col" aria-label="Footer pages">
+        <h4>Pages</h4>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Web development</a>
+        <a href="#services">UI / UX design</a>
+        <a href="#services">Mobile apps</a>
+        <a href="#services">SEO and marketing</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>hello@bluepeak.example</p>
+        <p>+92 300 0000000</p>
+        <p>Islamabad, Pakistan</p>
+        <form class="newsletter" action="#" method="post">
+          <input type="email" placeholder="Your email" aria-label="Your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+
     </div>
 
-    <!-- Column 2: page links -->
-    <div class="footer-col">
-      <h4>Pages</h4>
-      <a href="#home">Home</a>
-      <a href="#features">Features</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bluepeak. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </div>
     </div>
+  </footer>
 
-    <!-- Column 3: services -->
-    <div class="footer-col">
-      <h4>Services</h4>
-      <a href="#features">Landing pages</a>
-      <a href="#features">Business websites</a>
-      <a href="#features">Portfolio sites</a>
-      <a href="#features">Website fixes</a>
-    </div>
-
-    <!-- Column 4: contact + newsletter -->
-    <div class="footer-col footer-contact">
-      <h4>Contact</h4>
-      <p>hello@leafstudio.example</p>
-      <p>+92 300 0000000</p>
-      <p>Islamabad, Pakistan</p>
-
-      <form class="newsletter" onsubmit="return false;">
-        <input type="email" placeholder="Your email" aria-label="Your email">
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-
-  </div>
-
-  <!-- Bottom bar -->
-  <div class="footer-bottom">
-    <p>&copy; 2026 Leaf Studio. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
-    </div>
-  </div>
-
-</footer>
-
-  <!-- BACK TO TOP: position fixed (bottom right) -->
+  <!-- BACK TO TOP (position: fixed) -->
   <a href="#home" class="to-top" aria-label="Back to top">&uarr;</a>
 
 </body>
